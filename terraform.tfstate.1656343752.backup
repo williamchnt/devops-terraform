@@ -1,0 +1,191 @@
+{
+  "version": 4,
+  "terraform_version": "1.2.3",
+  "serial": 68,
+  "lineage": "189daa75-7695-5db2-a51d-9448dd7b445c",
+  "outputs": {},
+  "resources": [
+    {
+      "mode": "data",
+      "type": "azurerm_resource_group",
+      "name": "tp4",
+      "provider": "provider[\"registry.terraform.io/hashicorp/azurerm\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "id": "/subscriptions/765266c6-9a23-4638-af32-dd1e32613047/resourceGroups/devops-TP2",
+            "location": "francecentral",
+            "name": "devops-TP2",
+            "tags": {
+              "billing": "devops"
+            },
+            "timeouts": null
+          },
+          "sensitive_attributes": []
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "azurerm_linux_virtual_machine",
+      "name": "example",
+      "provider": "provider[\"registry.terraform.io/hashicorp/azurerm\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "additional_capabilities": [],
+            "admin_password": null,
+            "admin_ssh_key": [
+              {
+                "public_key": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDaq8t3RNinlHikmN0oEDkPIbFpOxXj6RYqtoHhgXabfJxofjJEEiQtLT2CNE9O5DXqcZGmRF9dJoQ6ikzPmKA31I4PVlhuUT3fts5xhAYRHTRVozZH9DVYG6FRvc4ctqWjXHHzpNW16W5MVIoWUOSiiLLtBLw78xqoN0PZOTzxrNa3ke/6HwS2MkqkuPudRnGzmm251gqxX1WAK2dogyqhUBhulmu3dqRs090b8BAAzXHLR0DIyQSl9IQXWcvye6R4jZ2a9jptfRcsIgcj8kZ8TWK3x0tmbncGdZy0/xAAMq6DlXKV8VKsYAz1N4taZ7H/EaD9If3kLfEs+F3j7LrCR2t+5c+vYoLSyNO3VCOYz8oa3ANg+FatMHcK/sv1yUTedY6LeV2gm/NcAW8jIbEpvoz+SVmHLS2RDTKgqZfeAhuGgIt6pvLaI+sBm8iJrycVP1W4d5YdkSQjTY7obpscTke7BE/+vV7zmBTMjFtckU/McwQ0mWGZxPhETRqQCMFWdMLGO71xcM+AmqSgi4XnMF6XIEkBnD1Rb4ZH/NuilYc2l89/uw4KyPntohvkM2m9evXUksX/FDtxYO9BmxjkHflE4PZrepYX8AB8Df6aEVf3yyFDLew1V2DqY5fzXFAdpoQhVUVecsk9DA0yM6ggW9QH6vqib2YnuYvMHeFhyQ==\n",
+                "username": "devops"
+              }
+            ],
+            "admin_username": "devops",
+            "allow_extension_operations": true,
+            "availability_set_id": "",
+            "boot_diagnostics": [],
+            "computer_name": "example-machine",
+            "custom_data": null,
+            "dedicated_host_group_id": "",
+            "dedicated_host_id": "",
+            "disable_password_authentication": true,
+            "edge_zone": "",
+            "encryption_at_host_enabled": false,
+            "eviction_policy": "",
+            "extensions_time_budget": "PT1H30M",
+            "id": "/subscriptions/765266c6-9a23-4638-af32-dd1e32613047/resourceGroups/devops-TP2/providers/Microsoft.Compute/virtualMachines/example-machine",
+            "identity": [],
+            "license_type": "",
+            "location": "francecentral",
+            "max_bid_price": -1,
+            "name": "example-machine",
+            "network_interface_ids": [
+              "/subscriptions/765266c6-9a23-4638-af32-dd1e32613047/resourceGroups/devops-TP2/providers/Microsoft.Network/networkInterfaces/devops-20200174"
+            ],
+            "os_disk": [
+              {
+                "caching": "ReadWrite",
+                "diff_disk_settings": [],
+                "disk_encryption_set_id": "",
+                "disk_size_gb": 30,
+                "name": "example-machine_disk1_da44a77ab5754b3395a55bcb068b8c58",
+                "storage_account_type": "Standard_LRS",
+                "write_accelerator_enabled": false
+              }
+            ],
+            "patch_mode": "ImageDefault",
+            "plan": [],
+            "platform_fault_domain": -1,
+            "priority": "Regular",
+            "private_ip_address": "10.3.1.20",
+            "private_ip_addresses": [
+              "10.3.1.20"
+            ],
+            "provision_vm_agent": true,
+            "proximity_placement_group_id": "",
+            "public_ip_address": "20.216.174.159",
+            "public_ip_addresses": [
+              "20.216.174.159"
+            ],
+            "resource_group_name": "devops-TP2",
+            "secret": [],
+            "secure_boot_enabled": false,
+            "size": "Standard_D2s_v3",
+            "source_image_id": "",
+            "source_image_reference": [
+              {
+                "offer": "UbuntuServer",
+                "publisher": "Canonical",
+                "sku": "16.04-LTS",
+                "version": "latest"
+              }
+            ],
+            "tags": {},
+            "termination_notification": [],
+            "timeouts": null,
+            "user_data": "",
+            "virtual_machine_id": "9e5cfd09-21b8-4ba5-a5cc-fe78118edc76",
+            "virtual_machine_scale_set_id": "",
+            "vtpm_enabled": false,
+            "zone": ""
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoyNzAwMDAwMDAwMDAwLCJkZWxldGUiOjI3MDAwMDAwMDAwMDAsInJlYWQiOjMwMDAwMDAwMDAwMCwidXBkYXRlIjoyNzAwMDAwMDAwMDAwfX0=",
+          "dependencies": [
+            "azurerm_network_interface.main",
+            "azurerm_public_ip.public_ip",
+            "data.azurerm_resource_group.tp4",
+            "data.azurerm_subnet.internal",
+            "data.azurerm_virtual_network.example",
+            "tls_private_key.rsa-4096-example"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "azurerm_public_ip",
+      "name": "public_ip",
+      "provider": "provider[\"registry.terraform.io/hashicorp/azurerm\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "allocation_method": "Dynamic",
+            "domain_name_label": null,
+            "edge_zone": "",
+            "fqdn": null,
+            "id": "/subscriptions/765266c6-9a23-4638-af32-dd1e32613047/resourceGroups/devops-TP2/providers/Microsoft.Network/publicIPAddresses/devops-20201006",
+            "idle_timeout_in_minutes": 4,
+            "ip_address": "20.216.174.159",
+            "ip_tags": {},
+            "ip_version": "IPv4",
+            "location": "francecentral",
+            "name": "devops-20201006",
+            "public_ip_prefix_id": null,
+            "resource_group_name": "devops-TP2",
+            "reverse_fqdn": null,
+            "sku": "Basic",
+            "sku_tier": "Regional",
+            "tags": {},
+            "timeouts": null,
+            "zones": []
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoxODAwMDAwMDAwMDAwLCJkZWxldGUiOjE4MDAwMDAwMDAwMDAsInJlYWQiOjMwMDAwMDAwMDAwMCwidXBkYXRlIjoxODAwMDAwMDAwMDAwfX0=",
+          "dependencies": [
+            "data.azurerm_resource_group.tp4"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "tls_private_key",
+      "name": "rsa-4096-example",
+      "provider": "provider[\"registry.terraform.io/hashicorp/tls\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "algorithm": "RSA",
+            "ecdsa_curve": "P224",
+            "id": "567b38190d059fcdd86b3002722bc3a498411378",
+            "private_key_openssh": "-----BEGIN OPENSSH PRIVATE KEY-----\n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\n-----END OPENSSH PRIVATE KEY-----\n",
+            "private_key_pem": "-----BEGIN RSA PRIVATE KEY-----\n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\nNR7mFWkCggEBAOolhs0UGRMHp8YnVX9rSPQz6d5wGtzn0001/jws+GN2AEiOiBW0\nshcu0RYhH7FY2viAdpgT6URCwgfOV8jls4aL/AkwwOkPAyd1ritZXhIRcOHgh+ng\nZbaigCZow820hYKYPSJUPvOZOourCxzKboPNje3diBJi9XX/8CKjQFYGR8G0y0uT\nAzResHOCwe63j8HmOHk+KTL0D0mY5rZeAVzERaJ3U27uDRXqjC5CbSBXOBwBWkba\n9L3tY0z7dqYImNoG2N54jD9z8wG9nCtSAdfBEjqjGWz6uOuZiuP3ePSTlve+2xpC\nCi084wjts8DKah5mEu30jETCtZae8ENqgEECggEAX1NmPczamogujd37yul6BVEa\nIpbTsy5xOmaaU2oN+o+t8wVHLTo3izBKhlqMPuVt7cGzxz3fVdiisR+iSty0o6Z7\n7bN4CWg7QSdSACccyYwConUsuGpFPolYu4lNDpIwSAMxD4VjD0f4j6PQrCD0IRxr\nniV2qjpqeoo2xPoU/8kY4jWfncLossZluENjBd3hqtKN7qoTnmdAqpBCeor2c04K\n0/A76kLTxOSdu1Q8AZckIBZgYueB3g6OBFz9MK8LZT+W+dJ3hIRtXplRyeIwCTBL\n9wObafCy9rLBldGJr15NiYQxEpcualW6W/krv/i6EAqF740T113NgOr8WUHsYQ==\n-----END RSA PRIVATE KEY-----\n",
+            "public_key_fingerprint_md5": "fd:36:e1:2b:d5:32:05:ec:28:fe:77:51:ea:1e:6d:e4",
+            "public_key_fingerprint_sha256": "SHA256:tjjG0QlZGSxSn1nLHY2A7cxMAfte/pwWLmr4BvSEcwM",
+            "public_key_openssh": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDaq8t3RNinlHikmN0oEDkPIbFpOxXj6RYqtoHhgXabfJxofjJEEiQtLT2CNE9O5DXqcZGmRF9dJoQ6ikzPmKA31I4PVlhuUT3fts5xhAYRHTRVozZH9DVYG6FRvc4ctqWjXHHzpNW16W5MVIoWUOSiiLLtBLw78xqoN0PZOTzxrNa3ke/6HwS2MkqkuPudRnGzmm251gqxX1WAK2dogyqhUBhulmu3dqRs090b8BAAzXHLR0DIyQSl9IQXWcvye6R4jZ2a9jptfRcsIgcj8kZ8TWK3x0tmbncGdZy0/xAAMq6DlXKV8VKsYAz1N4taZ7H/EaD9If3kLfEs+F3j7LrCR2t+5c+vYoLSyNO3VCOYz8oa3ANg+FatMHcK/sv1yUTedY6LeV2gm/NcAW8jIbEpvoz+SVmHLS2RDTKgqZfeAhuGgIt6pvLaI+sBm8iJrycVP1W4d5YdkSQjTY7obpscTke7BE/+vV7zmBTMjFtckU/McwQ0mWGZxPhETRqQCMFWdMLGO71xcM+AmqSgi4XnMF6XIEkBnD1Rb4ZH/NuilYc2l89/uw4KyPntohvkM2m9evXUksX/FDtxYO9BmxjkHflE4PZrepYX8AB8Df6aEVf3yyFDLew1V2DqY5fzXFAdpoQhVUVecsk9DA0yM6ggW9QH6vqib2YnuYvMHeFhyQ==\n",
+            "public_key_pem": "-----BEGIN PUBLIC KEY-----\nMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEA2qvLd0TYp5R4pJjdKBA5\nDyGxaTsV4+kWKraB4YF2m3ycaH4yRBIkLS09gjRPTuQ16nGRpkRfXSaEOopMz5ig\nN9SOD1ZYblE937bOcYQGER00VaM2R/Q1WBuhUb3OHLalo1xx86TVteluTFSKFlDk\nooiy7QS8O/MaqDdD2Tk88azWt5Hv+h8EtjJKpLj7nUZxs5ptudYKsV9VgCtnaIMq\noVAYbpZrt3akbNPdG/AQAM1xy0dAyMkEpfSEF1nL8nukeI2dmvY6bX0XLCIHI/JG\nfE1it8dLZm53BnWctP8QADKug5VylfFSrGAM9TeLWmex/xGg/SH95C3xLPhd4+y6\nwkdrfuXPr2KC0sjTt1QjmM/KGtwDYPhWrTB3Cv7L9clE3nWOi3ldoJvzXAFvIyGx\nKb6M/klZhy0tkQ0yoKmX3gIbhoCLeqby2iPrAZvIia8nFT9VuHeWHZEkI02O6G6b\nHE5HuwRP/r1e85gUzIxbXJFPzHMENJlhmcT4RE0akAjBVnTCxju9cXDPgJqkoIuF\n5zBelyBJAZw9UW+GR/zbopWHNpfPf7sOCsj57aIb5DNpvXr11JLF/xQ7cWDvQZsY\n5B35ROD2a3qWF/AAfA3+mhFX98shQy3sNVdg6mOX81xQHaaEIVVFXnLJPQwNMjOo\nIFvUB+r6om9mJ7mLzB3hYckCAwEAAQ==\n-----END PUBLIC KEY-----\n",
+            "rsa_bits": 4096
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA=="
+        }
+      ]
+    }
+  ]
+}
