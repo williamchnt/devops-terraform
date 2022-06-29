@@ -1,22 +1,3 @@
-terraform {
-
-   required_version = ">=0.12"
-
-   required_providers {
-     azurerm = {
-       source = "hashicorp/azurerm"
-       version = "=3.0.0"
-     }
-   }
- }
-
- provider "azurerm" {
-    subscription_id = "765266c6-9a23-4638-af32-dd1e32613047"
-   features {
-    
-   }
- }
-
 resource "azurerm_public_ip" "public_ip" {
   name                = "devops-20201006" 
   resource_group_name = data.azurerm_resource_group.tp4.name
@@ -24,8 +5,6 @@ resource "azurerm_public_ip" "public_ip" {
   allocation_method   = "Dynamic"
 
 }
- 
-
 
 resource "azurerm_network_interface" "main" {
   name                = "devops-20201006" 
@@ -41,6 +20,24 @@ resource "azurerm_network_interface" "main" {
   }
 }
 
+resource "azurerm_network_security_group" "myterraformnsg" {
+  name                = "myNetworkSecurityGroup"
+  location            = "francecentral"
+  resource_group_name = data.azurerm_resource_group.tp4.name
+
+  security_rule {
+    name                       = "SSH"
+    priority                   = 1001
+    direction                  = "Inbound"
+    access                     = "Allow"
+    protocol                   = "Tcp"
+    source_port_range          = "*"
+    destination_port_range     = "22"
+    source_address_prefix      = "*"
+    destination_address_prefix = "*"
+  }
+}
+
 resource "tls_private_key" "rsa-4096-example" {
   algorithm = "RSA"
   rsa_bits  = 4096
@@ -53,6 +50,8 @@ resource "azurerm_linux_virtual_machine" "example" {
   location            = "francecentral"
   size                = "Standard_D2s_v3"
   admin_username      = "devops"
+  computer_name = "devops-20201006"
+  disable_password_authentication = true
   network_interface_ids = [
     azurerm_network_interface.main.id,
   ]
